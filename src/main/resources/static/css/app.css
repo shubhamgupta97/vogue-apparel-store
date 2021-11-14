@@ -1,0 +1,56 @@
+body {
+	padding-top: 65px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.bd-placeholder-img {
+	font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+	.bd-placeholder-img-lg {
+    	font-size: 3.5rem;
+	}
+}
+
+.brand-logo {
+	font-family: Lobster, cursive;
+	font-size: 2rem;
+}
+
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+
+.img-container {
+	height: 279.55px;
+}
+
+.new-arrival {
+	font-size: 0.3em;
+	padding: 2px 5px;
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: yellow;
+	margin-left: 0.7em;
+	margin-bottom: 2px;
+}
+
+.discounted {
+	font-size: 0.7em;
+	padding: 2px 5px; 
+	color: green;
+}
+
+.sortby-section {
+	margin-bottom: 20px;
+}
