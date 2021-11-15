@@ -45,6 +45,11 @@ public class ProductController {
 
 		return "index";
 	}
+	
+	@GetMapping("/login")
+	public String loginPage() {
+		return "login";
+	}
 
 	private void processQueryParam(Optional<String> q, Optional<String> v, Model model) {
 		if (v.isPresent()) {

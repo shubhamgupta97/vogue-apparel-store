@@ -1,10 +1,19 @@
 package co.shubhamgupta.vogue.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table
 public class User {
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	private String name;
+	private String username;
 	private String password;
 	private Character gender;
 	
@@ -13,10 +22,17 @@ public class User {
 	public User() {
 	}
 	
-	public User(Long id, String name, String password, Character gender) {
+	public User(String username, String password, Character gender) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.gender = gender;
+	}
+	
+	public User(Long id, String username, String password, Character gender) {
 		super();
 		this.id = id;
-		this.name = name;
+		this.username = username;
 		this.password = password;
 		this.gender = gender;
 	}
@@ -29,12 +45,12 @@ public class User {
 		this.id = id;
 	}
 	
-	public String getName() {
-		return name;
+	public String getUsername() {
+		return username;
 	}
 	
-	public void setName(String name) {
-		this.name = name;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	
 	public String getPassword() {
@@ -55,7 +71,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", password=" + password + ", gender=" + gender + "]";
+		return "User [id=" + id + ", username=" + username + ", password=" + password + ", gender=" + gender + "]";
 	}
 	
 	
