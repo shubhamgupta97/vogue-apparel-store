@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport"
@@ -83,9 +84,8 @@
 		<section class="py-4 text-center container">
 			<div class="row py-lg-4">
 				<div class="col-lg-6 col-md-8 mx-auto">
-					<h1 class="fw-light">
-						Online shopping made easy<br>
-						<!-- <span class="brand-logo">Vogue</span> -->
+					<h1 class="fw-light">Welcome, 
+						<span class="username" th:text="${username}"></span>
 					</h1>
 					<p class="lead text-muted">If you would like to experience the
 						best of online shopping for men and women in India, you are at the
@@ -170,7 +170,7 @@
 				<a href="#">Back to top</a>
 			</p>
 			<p class="mb-1">
-				Vogue Web App <a href="#">(code)</a> built by Shubham Gupta.
+				Vogue Web App <a href="https://github.com/shubhamgupta97/vogue-apparel-store">(code)</a> built by Shubham Gupta.
 			</p>
 			<p class="mb-0">
 				User Interface based on a <a

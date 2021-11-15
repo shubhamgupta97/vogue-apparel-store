@@ -54,3 +54,7 @@ img {
 .sortby-section {
 	margin-bottom: 20px;
 }
+
+.username {
+	text-transform: capitalize;
+}
