@@ -43,6 +43,9 @@ public class ProductController {
 
 	@GetMapping(value = "/search")
 	public String renderIndexOnSearch(@RequestParam("q") Optional<String> q, Model model) {
+		
+		UserPrincipal principal = (UserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		model.addAttribute("username", principal.getUsername());
 
 		if (q.isPresent()) {
 			String qValue = q.get();
