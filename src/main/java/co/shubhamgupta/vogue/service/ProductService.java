@@ -52,4 +52,8 @@ public class ProductService {
 	public List<Product> getProductsFilteredBySearchKeyword(String keyword) {
 		return repository.search(keyword);
 	}
+
+	public Product getProductById(long id) {
+		return repository.getById(id);
+	}
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-	  xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport"
@@ -14,17 +13,16 @@
 	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 	crossorigin="anonymous">
 <link href="css/app.css" rel="stylesheet">
+<link href="css/show.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
 	href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
 	rel="stylesheet">
 
-
-
+<title>Show Page</title>
 </head>
 <body>
-
 	<header>
 		<div class="collapse bg-dark" id="navbarHeader">
 			<div class="container">
@@ -81,7 +79,7 @@
 
 	<main>
 
-		<section class="py-4 text-center container">
+		<!-- <section class="py-4 text-center container">
 			<div class="row py-lg-4">
 				<div class="col-lg-6 col-md-8 mx-auto">
 					<h1 class="fw-light">Welcome, 
@@ -95,25 +93,18 @@
 
 				</div>
 			</div>
-		</section>
+		</section> -->
 
 		<div class="album py-5 bg-light">
 			<div class="container">
 
-				<section class="sortby-section">
-					<span class="h5">Sort By:</span> <a href="/?q=sortBy&v=new">New
-						Arrival</a> / <a href="/?q=sortBy&v=discount">Discount</a> / <a
-						href="/?q=sortBy&v=men">Men</a> / <a href="/?q=sortBy&v=women">Women</a>
-
-					<span class="text-muted"> | </span> <span class="h5">Filter
-						By:</span> <a href="/?q=filterBy&v=new">New Arrival</a> / <a
-						href="/?q=filterBy&v=discount">Discount</a> / <a
-						href="/?q=filterBy&v=men">Men</a> / <a href="/?q=filterBy&v=women">Women</a>
+				<section class="sortby-section d-flex flex-row-reverse">
+					<a href="/">Go Back</a>
 				</section>
 
-				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-					<div th:each="product: ${products}" class="col">
-						<div class="card shadow-sm">
+				<div class="row row-cols-1">
+					<div class="col">
+						<div class="card shadow-sm d-lg-flex flex-lg-nowrap flex-wrap flex-row">
 
 							<div class="img-container">
 								<img th:src="@{${'asset/' + product.image}}">
@@ -149,7 +140,7 @@
 								<div
 									class="d-flex justify-content-between align-items-center flex-row-reverse">
 									<div class="btn-group">
-										<a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/{id}(id=${product.id})}">View</a>
+										<!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
 										<button type="button" class="btn btn-sm btn-outline-secondary">Add
 											To Cart</button>
 									</div>
